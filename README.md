@@ -32,13 +32,13 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-course">About The Course</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#JavaScript Features">JavaScript Features</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -53,39 +53,34 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+## about-the-course
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-### Built With
+<!-- JavaScript Features -->
+## JavaScript Features
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+javascript has many features, a long the way you will understand every point of the following
+after studying the following you will have a solid background to kick-start your career in JS
+1. Loosely type language
+variable type will be determined according to its value, note that you can know 
+the type of any variable using `typeof(variable-name);`
+```sh 
+var x;          // type of x is undefined 
+var x = 10;     // type of x is number
+var x = "ITI"   // type of x is string
+```
+2. Object based language
+   * User defined object
+   * Language object (numbers, math, string,...)
+   * Browser objects also called BOM (navigator, window, History)
+   * HTML object also called DOM 
+3. Interpreted language 
+4. Integrated with HTML 
+5. Case sensitive 
 
 ### Prerequisites
 
