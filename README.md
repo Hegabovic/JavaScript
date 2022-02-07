@@ -55,23 +55,20 @@
 
 <!-- ABOUT THE PROJECT -->
 ## about-the-course
+javascript has many features, a long the way you will understand every point of the following
+after studying the following you will have a solid background to kick-start your career in JS
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- JavaScript Features -->
 ## JavaScript Features
-
-javascript has many features, a long the way you will understand every point of the following
-after studying the following you will have a solid background to kick-start your career in JS
 1. Loosely type language
 variable type will be determined according to its value, note that you can know 
 the type of any variable using `typeof(variable-name);`
 ```sh 
-var x;          // type of x is undefined 
-var x = 10;     // type of x is number
-var x = "ITI"   // type of x is string
+var x;           // type of x is undefined 
+var x = 10;      // type of x is number
+var x = "ITI";   // type of x is string
 ```
 2. Object based language
    * User defined object
