@@ -58,7 +58,7 @@ after studying the following you will have a solid background to kick-start your
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- JavaScript Features -->
-## JavaScript-Features
+## JavaScript Features
 1. Loosely type language: not strongly typed language <br>
 Variables type will be determined according to its value, note that you can know 
 the type of any variable using `typeof(variable-name);` or `typeof variable-name; ` and it returns small letter
