@@ -40,7 +40,7 @@
     <li>
       <a href="#JavaScript Features">JavaScript Features</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#Type system of JS ">Type system of JS </a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -62,51 +62,94 @@ after studying the following you will have a solid background to kick-start your
 
 <!-- JavaScript Features -->
 ## JavaScript Features
-1. Loosely type language
-variable type will be determined according to its value, note that you can know 
-the type of any variable using `typeof(variable-name);`
+1. Loosely type language: not strongly typed language <br>
+Variables type will be determined according to its value, note that you can know 
+the type of any variable using `typeof(variable-name);` or `typeof variable-name; ` and it returns small letter
 ```sh 
-var x;           // type of x is undefined 
+var x;           // type of x is undefined (not initlized)
 var x = 10;      // type of x is number
 var x = "ITI";   // type of x is string
 ```
 2. Object based language
-   * User defined object
-   * Language object (numbers, math, string,...)
+   * User defined objects
+   * Language objects (Numbers, Math, Date, String,...)
    * Browser objects also called BOM (navigator, window, History)
-   * HTML object also called DOM 
-3. Interpreted language 
-4. Integrated with HTML 
-5. Case sensitive 
+   * HTML objects also called DOM 
+3. Interpreted language <br>
+it isn't a compiled language, and it operates from top to bottom : left to right
+4. event handling 
+5. Integrated with HTML 
+6. Case Sensitive <br>
+`var a;` is very different from `var A;`
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+## Type system of JS 
+1. primitive types 
+   * Undefined
+   * String
+   * Number
+   * Null
+   * boolean
+2.Object types
+   * Date
+   * Array
+   
+## Where To Write JS
+### internal script 
+1. internal HTML: Within script tag 
+```sh
+    <head>
+        <script>
+              // code
+        </script>
+    </head>
+```
+2. allowed writing Script codes inside body tag within script
+```sh
+    <body>
+        <script>
+              // code
+        </script>
+    </body>
+```
+3. inline script: event handling scripts
+```sh
+ <button onclick="function call();"/>   
+```
+### external script
+ - put script tag `<script></script>` before the end of the body tag.
+```sh
+    <body>
+        
+        <script src="test.js" ></script>
+    </body>
+```
+ - javascript is a client side language so the user might close script running from browser settings.
+```sh
+ <noscript>
+  <h3> Enable JS </h3>
+ </noscript>   
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
+## Primitive type variables
+- semicolon `;` is optional in JS. <br>
+- `null` is used to reset reference.<br>
+```sh
+ var x ;         // Without initial value : variable from type undefined : undefined
+ var x = 10;     // x value =  10  from type: number
+ var x = "ITI";  // x value =  ITI from type: string
+ var x = true;   // x value = true from type: boolean
+ var x = null;   // x value = null from type: `OBJECT`  
+```
+### Number type
+to declare variable from type number:
+1. literal creation 
+ ```sh
+   var x = 10;  // from type `Number`: prototype name : object Name 
+ ```
+2. constructor creation: use keyword `new` plus `prototype` name.
+ 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
