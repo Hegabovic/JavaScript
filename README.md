@@ -28,9 +28,10 @@
 
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
+<summary>Table of Contents</summary>
+<ol>
     <li>
       <a href="#about-the-course">About The Course</a>
     </li>
@@ -38,16 +39,23 @@
       <a href="#JavaScript-Features">JavaScript Features</a>
       <ul>
         <li><a href="#Type-system-of-JS">Type system of JS </a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Where-To-Write-JS">Where To Write JS</a></li>
+            <ul>
+               <li><a href="#Internal-script">internal script</a></li>
+               <li><a href="#External-script">External script</a></li>
+            </ul>
       </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
+    <li><a href="#Primitive-type-variables">Primitive type variables</a></li>
+    <li><a href="#Number-type-declaration">Number type declaration</a></li>
+      <ul>
+        <li><a href="#Literal-creation">Literal creation</a></li>
+        <li><a href="#Constructor-creation">Constructor creation</a></li>
+      </ul>
+    <li><a href="#Number-Literals-representation">Number Literals representation</a></li>
+    <li><a href="#Dialogs">Dialogs</a></li>
+    <li><a href="#parseInt-parseFloat-Algorithms">parseInt, parseFloat Algorithms</a></li>
+    <li><a href="#NaN-not-a-number">NaN: not a number</a></li>
+</ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
@@ -81,18 +89,20 @@ it isn't a compiled language, and it operates from top to bottom : left to right
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Type system of JS 
-1. primitive types 
+### primitive types 
    * Undefined
    * String
    * Number
    * Null
    * boolean
-2.Object types
+### Object types
    * Date
    * Array
-   
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Where To Write JS
-### internal script 
+### Internal script 
 1. internal HTML: Within script tag 
 ```sh
     <head>
@@ -113,7 +123,9 @@ it isn't a compiled language, and it operates from top to bottom : left to right
 ```sh
  <button onclick="function call();"/>   
 ```
-### external script
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### External script
  - put script tag `<script></script>` before the end of the body tag.
 ```sh
     <body>
@@ -140,19 +152,22 @@ it isn't a compiled language, and it operates from top to bottom : left to right
  var x = true;   // x value = true from type: boolean
  var x = null;   // x value = null from type: `OBJECT`  
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Number type declaration 
 to declare variable from type number:
-1. literal creation 
+### Literal creation 
  ```sh
    var x = 10;  // from type `Number`: prototype name : object Name
    x.toFixed(2); // create a wrapper object from type Number then access toFixed function then delete wrapper object
    
  ```
-2. constructor creation: use keyword `new` plus `prototype` name.<br>
- - better as performance wise.
- - if you will use this variable so many times in your application use constructor creation, will create the object only 
+### Constructor creation: 
+   - use keyword `new` plus `prototype` name.<br>
+   - better as performance wise.
+   - if you will use this variable so many times in your application use constructor creation, will create the object only 
 one time, less hitting on the memory.<br>
- - in memory: reference and object, to get the value of the reference use `.valueof()` 
+   - in memory: reference and object, to get the value of the reference use `.valueof()` 
   ```sh
    var a = new Number(10);  // from type `Number`: prototype name : object Name
  ```
@@ -175,6 +190,9 @@ to call your added function (constructor creation)
 ```sh
    a.sayHello();
  ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Number Literals representation:
 ```sh
    var x = 1024;        // decimal : radix : 10 
