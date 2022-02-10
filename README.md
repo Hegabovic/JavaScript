@@ -69,7 +69,9 @@ after studying the following you will have a solid background to kick-start your
 ## JavaScript Features
 1. Loosely type language: not strongly typed language <br>
 Variables type will be determined according to its value, note that you can know 
-the type of any variable using `typeof(variable-name);` or `typeof variable-name; ` and it returns small letter
+the type of any variable using `typeof(variable-name);` or `typeof variable-name; ` and it returns small letter, and you
+can use another property, and it is better `variable-name.constructor.name` will return the original type no matter 
+the creation was either literal or construction. 
 ```sh
 var x;           // type of x is undefined (not initlized)
 var x = 10;      // type of x is number
@@ -239,9 +241,135 @@ confirm("Do you want to repeat ?");
  - from type `Number`
  - NaN not equal anything even NaN (NaN==NaN => false)
  - NaN is a toxic value : NaN + 200 => NaN
- - to check NaN use `isNaN("String")`
+ - to check NaN use `isNaN("String")`<br>
+
+division on zero in javaScript will not throw exception
+    * number / zero  => infinity <br>
+    * number / -zero => - infinity <br>
+    * infinity / infinity => NaN <br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+### Casting: Convert type to another type
+##explicit cast (Number, + operator)
+1. Number , + have the same algorithm <br>
+   *Trim for input String
+      - check String length = 0 > return 0
+      - if all characters inside string is digits or not
+         - return `number`
+         - else return `NaN` <br>
+YOU CAN REPLACE ALL `Number` WITH `+` AND GET `SAME RESULT`
+Number(new Data()); => return `number in milliseconds` 
+Number(false);     => `0`
+Number(true);      => `1`
+Number(null)       => `0`
+Number(undefined)  => `undefined`
+Number(" \n\t")    => `0`
+```sh
+   Number("    ");    // output will be 0
+   Number("  123");   // output will be 123
+   Number(" 123ABC"); // output will be NaN
+   ```
+## implicit cast : coercion 
+- `+ operator` is used convert second operand to String,used for concatenation
+- All other operators are casting string to number
+
+## Equality check VS Strict check
+ - Equality check `==` only check the content regardless the type of the operands
+ - Strict check `===` check if `two operands` from the `same type` 
+   - if false => return false 
+   - if true => evaluate value of operands 
+ ## Scopes 
+   1. global scope
+   ```sh
+   var test = 10; //global scope
+    testTwo = 20; // global scope variable without keyword var must be initlized 
+   ```
+   2. local scope Also call function scope 
+  ```sh
+   function myFunc(){
+     var test = 10;  //variable is in local scope cant be accessed outside the function
+     takeCare = 911; // this variable is Accessible as global variable after the function calling occurence   
+   } 
+   myFunc();   
+   ```
+`takeCare` is Accessible as `global variable` After the function call occurrence 
+
+## Object from String:
+length property is read only 
+methods: 
+1. manipulate String
+   - charAt(index)
+```sh
+   myString = "ITI Alexandria Branch"
+   myString.charAt(0);                  // return 'I'
+   myString.charAt(myString.length);    // return ' ' empty string
+```
+   - indexOf("ch,word,number",number-of-start-from-index)
+```sh
+myString.indexOf("A");  // 4
+myString.indexOf("@");  // -1 doesnt exist 
+myString.subString(myString.indexOf(Alex)); // return  'Alexandria Branch' 
+```
+   - lastIndexOf()
+```sh
+myString.lastIndexOf("h"); // 20 
+```
+   - subString(start,end?)
+```sh
+subString(0,3);  => return string from index 0 to index 2 
+subString(0);    => return end String.Length
+subString(5,1);  => swap two values (1,5)
+subString(-1);   => start from index 0
+subString(5,-1); => subString(-1,5) => subString(0,5) 
+```
+   - slice(start,end?)
+```sh
+myStr.slice(-6);  // return 'Branch'
+myStr.slice(0,3); // return 'ITI'
+```
+   - substr(start-position,length)
+```sh
+substr(0,3); //return 'ITI'
+```
+   - split("splitter) 
+```sh
+split("") => return Array
+"1,2,3,4,5".split(","); => return ["1","2","3","4","5"]
+```
+   - replace("","") OR replace(regex,value)
+```sh
+myString.replace("A","@"); // return "ITI @lexandria Branch" CHANGE ONLY FIRST OCCURENCE
+myString.replace(/n/g,"s");
+```
+2. format string
+   - .toUpperCase()
+   - .toLowerCase()
+   - .bold()
+```sh
+myString.bold().italics();   // method chaining is allowed in JS 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
