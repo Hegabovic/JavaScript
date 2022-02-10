@@ -353,6 +353,168 @@ myString.bold().italics();   // method chaining is allowed in JS
 
 
 
+# Arrays In JavaScript 
+In javascript: an Array is a Collection of Arranged Data
+    * array object `doent have` to be `fixed size` .
+    * Data `doenst have` to be `homogenous`.
+
+## declare array object
+1. Literal creation 
+```sh
+var myArr=[];           // Create for array object with length=0
+var myArr=[1,2,3,4]     // Create an array object from type array with length 4 started from index 0 to index 3
+```
+2. Constructor creation
+```sh
+var myArr = new Array();        // Create for array object with length=0 
+var myArr = new Array(5);       // Create an array obj from type array length=5, data initalized by `Undefined`
+var myArr = new Array[1,2,3,4]; // Create an array obj from type array length=4, data initalizedby `passed_Data` 
+```
+###### `Dense Array` means that the `indexes` is `Numeric`. <br>
+###### `Associative Array` **special type** of object `arr["ID"]=10;` means that keys are `Strings`. **not recommended** <br>
+
+
+Using `Indexer` you can `set`, `get`, `add`,and `delete` data 
+
+```sh
+myArr[0]=100;    // set data
+myArr[1];        // get data
+myArr[5]=100;    // add data  will add holes with `undefined` value until it reach the index you wanted NOT RECOMMENDED
+delete myArr[2]  // replace value of index 2 with `undefined` NOT RECOMMENDED
+```
+## Methods available with array object
+* properties: 
+    - .length: `Dense array` : keys are numbers. <br>
+* Methods:
+1. For `Adding` new items ( append , prepend , insert ) <br>
+    * `push`,`unshift`,`splice` >> update original array
+```sh
+var myArr = [10,20,30,40,50,60];
+myArr.push(70);   // add in last position  
+myArr.unshift(5);  //add at index zero      
+```
+myArr.splice(target-index,0,value which will be added)    => 0: indicate : insertion
+myArr.splice(target-index,2,value which will be removed)  => 2: means delete 2 items starting with target-index
+```sh
+myArray.splice(1,0,5);       //  adding [10,5,20,30,40,50,60]
+myArray.splice(1,2,100,100); // reomving [10,100,100,40,50,60]
+```
+
+2. For looping :forEach
+    * `forEch` is a function you `have to call` using `Array Object`<br>
+```sh
+myArr.filter(function(val){return val % 2 == 0; })
+     .forEach(function(el.i){console.log(i +" : "+el);});
+```
+3. For `removing` (from end, from start, in between)
+      * `pop`,`shift`,`splice` >> update original array
+```sh
+myArr.pop(70);   // remove from last position  
+myArr.shift(5);  //remove at index zero 
+```
+4. Manipulation:
+   * Filter<br>
+     * by default `filter()` is `looping`
+     * always return array object, You can take it and save it in another variable
+```sh
+var myArr = [1,2,3,4,5,6];
+var result = myArr.filter(function(val){return val % 2 == 0;});
+```
+   * Sort >> update original array <br>
+     - `default soring` is based on `ASSCII table` for `Strings`
+     - To sort numbers you need to pass a function to help to sort 
+     `- anonymous function: function without name: call backs :
+        pass function to another function as a parameter`
+```sh
+var arr =[500,15,100,2,-20]; // not sorted
+arr.sort(function(x,y){return x-y;});
+```
+   * reverse()
+```sh
+var arr =[500,15,100,2,-20]; // not sorted
+arr.sort(function(x,y){return x-y;}).reverse();  // sorted and reversed
+```
+   * Map
+     * return new version of the array without modifying the original array
+```sh
+var names =["Abdullah","Ahmed","Mahmoud","Hegab"];
+var result = names.map(function(val){return val + "@mcit.gov.eg";})
+the output will be ["Abdullah@mcit.gov.eg","Ahmed@mcit.gov.eg","Mahmoud@mcit.gov.eg","Hegab@mcit.gov.eg"];
+```
+   * slice(start,?end)
+     * return array without any update in original array
+```sh
+var myArr = [10,20,30,40,50];
+var result = myArr.slice(1,4);
+```
+   * reduce , reduceRight
+     * one value from array values
+     * myArr.reduce(function(prev,next){return p +=n;},initialize)
+   ```sh
+var myArr = [1,2,3,4,5,6,7]; 
+myArr.reduce(function(prev,next){return p +=n;});      //28
+myArr.reduce(function(prev,next){return p +=n;},100); //128
+```
+   * Some
+     * return > boolean (True,False)
+     * at least one element match condition
+```sh
+var myArr = [100,3,20,4];
+var test = myArr.some(function(v){return v % 2 == 0;});
+```
+   * Every
+     * return > boolean (True,False)
+     * all elements match condition
+```sh
+var test = myArr.every(function(v){return v % 2 == 0;});
+```
+   * concat
+```sh
+var arrOne = [1,2,3,4];
+var arrTwo = [10,20,30,40,50];
+var arrThree = arrOne.concat(arrTwo);
+```
+   * join (separator)
+```sh
+var arrOne = [1,2,3,4];
+arrOne.join("@"); [1@2@3@4];
+arrOne.eval(join("+"));  // evel NOT RECOMMENDED
+```
+
+# Date , Boolean , Math
+
+
+
+
+
+
+
+
+
+
+### NOTES 
+if you want to loop over associative arrays use `for in`
+
+for(var i in Object_name){
+    console.log(i);  // this means the keys
+    console.log(i+ ":" + person[i]);  // this means the keys
+}
+
+* Filter call back function >> (element value,index,traversed object)
+
+
+
+
+
+
+
+
+
+
+
+### BOM ,and DOM
+
+### Events:
 
 
 
