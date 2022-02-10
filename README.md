@@ -354,9 +354,9 @@ myString.bold().italics();   // method chaining is allowed in JS
 
 
 # Arrays In JavaScript 
-In javascript: an Array is a Collection of Arranged Data
-    * array object `doent have` to be `fixed size` .
-    * Data `doenst have` to be `homogenous`.
+In javascript: an Array is a Collection of Arranged Data<br>
+    * array object `doent have` to be `fixed size` .<br>
+    * Data `doenst have` to be `homogenous`.<br>
 
 ## declare array object
 1. Literal creation 
@@ -393,15 +393,15 @@ var myArr = [10,20,30,40,50,60];
 myArr.push(70);   // add in last position  
 myArr.unshift(5);  //add at index zero      
 ```
-myArr.splice(target-index,0,value which will be added)    => 0: indicate : insertion
-myArr.splice(target-index,2,value which will be removed)  => 2: means delete 2 items starting with target-index
+myArr.splice(target-index,0,value which will be added)    => 0: indicate : insertion<br>
+myArr.splice(target-index,2,value which will be removed)  => 2: means delete 2 items starting with target-index<br>
 ```sh
 myArray.splice(1,0,5);       //  adding [10,5,20,30,40,50,60]
 myArray.splice(1,2,100,100); // reomving [10,100,100,40,50,60]
 ```
 
 2. For looping :forEach
-    * `forEch` is a function you `have to call` using `Array Object`<br>
+    * `forEach` is a function you `have to call` using `Array Object`<br>
 ```sh
 myArr.filter(function(val){return val % 2 == 0; })
      .forEach(function(el.i){console.log(i +" : "+el);});
