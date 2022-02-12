@@ -482,6 +482,160 @@ arrOne.eval(join("+"));  // evel NOT RECOMMENDED
 ```
 
 # Date , Boolean , Math
+## Date
+there is only one way using Constructor creation 
+```sh
+var myDate = new Date(); //create object from Date object with current Date time
+```
+method are divided into 3 categories: <br>
+1. get
+  * getFullyear();
+  * getMonth();
+  * etc
+2. set 
+  * setDate();
+  * etc
+3. to
+  * toLocalString();
+  * etc
+
+## Boolean: true | false
+- creation for Boolean object: default return of Boolean is `false` <br>
+   * Literal creation<br>
+     * var test = true;
+   * Constructor Creation<br>
+     * var test = new Boolean(true);<br>
+### Truthy and Falsy expression in javascript:
+- falsy: most common falsy values:<br> 
+     1. 0
+     2. false
+     3. undefined
+     4. null
+     5. NaN
+     6. ""
+```sh
+var unserInput = prompt("Enter Value") || 50;
+hit cancel will retrun null falsy : userInput = 50;
+enter name as a string will retrun null truthy : userInput = "name";
+hit "" will retrun falsy : userInput = 50;
+```
+```sh
+function(_myarr){
+  if(_myarr == null && _myarr.toString() && myarr.constructor.name =="Array"){
+      return _myarr.reduce(function(p,n){return p+=n;});  
+    } else {
+      return 0;
+      }
+    }
+```
+### And , or Operators 
+|| and && : Short circuit logical operators <br>
+|| return true if one of two parts return true , return cause of True <br>
+&& return true if all parts evaluate to true , return cause of false <br>
+```sh
+0 || "Abdullah" => "Abdullah"
+"Ali" || 0 => "Ali"
+null || 0 => 0
+```
+## MATH
+- static object: Static Methods plus static properties<br>
+  - math.round();
+  - math.floor();
+  - math.ceil();
+  - math.random(); 0 included -> 1 excluded 
+  - math.PI
+
+
+# Functions: Function Statements
+- in javascript function is `first class object`<br>
+  * return function from function:`Closure` <br>
+  * pass function to another function as a parameter<br>
+  * assign function to variable: `function expression`<br>
+  * assign function to property (Anonymous Function): `declare object`<br>
+- any function in JS will `return;` `undefined` even if you didnt type return in function body.
+1. Function statement<br>
+   - name is a `mandatory`<br>
+   - start with keyword `function`<br>
+```sh
+function sum(parameters-list){
+  // body of function
+}
+sum(); //calling your function 
+```
+2. Function expression <br>
+   * function name is optional  
+```sh
+var sum = function sum(parameters-list){
+  // body of function
+}
+sum(); //calling your function 
+```
+3. Arrow Function (ES6)
+4. Anonymous Function (function without name, callbacks for another function)
+
+
+
+
+**function statement and expression** 
+- **has two properties**:<br>
+  * `this` => refer to `caller` object <br> 
+    * arguments: array like (contains all passed values)     
+      - has length property 
+      - you can't iterate over it using indexer 
+      -you can't use array methods with arguments direct
+```sh
+function sum(){
+  //arguments like array 
+  for(var i=0; i<arguments.length;i++){
+    console.log(arguments[i]);
+  }
+}
+sum();
+sum(10,20);
+sum(10,20,30);
+```
+
+# BOM ,and DOM
+
+## Browser Object Model : BOM
+- javascript is an object base language 
+
+* window object
+  * open("new window to be opened")
+  * opener(reference to base window)
+  * focus
+  * close
+  * moveTo
+  * moveBy
+  * scrollBy
+  * resizeTo
+  * resizeBy
+  * Timers: setInterval
+  * Timers: setTimeOut
+  * Timers: clearInterval
+  * Timers: clearTimeOut
+```sh
+
+```
+## navigator, search, history,location
+
+### navigator 
+### location 
+replace(url) not saved in history 
+assign(url) you can back to previous page 
+
+### history 
+history.length
+history.forward()
+history.back()
+history.go()
+```sh
+for(var i in navigator){
+  document.write(i + ":" + navigator[i]+"<br/>");
+}
+
+```
+
 
 
 
@@ -503,6 +657,7 @@ for(var i in Object_name){
 * Filter call back function >> (element value,index,traversed object)
 
 
+* JS has `no OVERLOADING`
 
 
 
@@ -512,7 +667,6 @@ for(var i in Object_name){
 
 
 
-### BOM ,and DOM
 
 ### Events:
 
